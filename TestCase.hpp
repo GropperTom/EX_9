@@ -21,8 +21,7 @@ public:
 	template<class T>
 	TestCase& check_equal(T input, T expected);
 
-	template<class T>
-	TestCase& check_different(T input, T expected);
+	template <class T> TestCase& check_different(T input, T expected);
 
 	template<class T>
 	TestCase& check_output(T input, string expected);
