@@ -29,7 +29,7 @@ public:
 			++_num_passed;
 		}
 		else {
-			_out << _name << " Failure in test #" << _num_tests << ": The inputs are not equal!" << endl;
+			_out << _name << ": Failure in test #" << _num_tests << ": The inputs are not equal!" << endl;
 		}
 		return *this;
 	}
@@ -41,7 +41,7 @@ public:
 			++_num_passed;
 		}
 		else {
-			_out << _name << " Failure in test #" << _num_tests << ": The inputs are equal!" << endl;
+			_out << _name << ": Failure in test #" << _num_tests << ": The inputs are equal!" << endl;
 		}
 		return *this;
 	}
@@ -56,7 +56,7 @@ public:
 			++_num_passed;
 		}
 		else {
-			_out << _name << " Failure in test #" << _num_tests << ": string value should be " << expected << " but is " << input_str << endl;
+			_out << _name << ": Failure in test #" << _num_tests << ": string value should be " << expected << " but is " << input_str << endl;
 		}
 		return *this;
 	}
