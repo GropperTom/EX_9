@@ -36,7 +36,7 @@ struct MyStruct {
 		return false; // a deliberate bug
 	}
 	bool operator!=(const MyStruct& other) {
-		return num != other.num; // no bug 
+		return num != other.num; // no bug
 	}
 	int myNum() const {
 		return num + 2;   // a deliberate bug
@@ -65,7 +65,7 @@ int main() {
 	TestCase("Test MyStruct operators", cerr)
 		.check_equal(MyStruct(5), MyStruct(5))      // Here there is a bug.
 		.check_different(MyStruct(5), MyStruct(6))  // Here there is no bug.
-		.check_output(MyStruct(5), "MyStruct(5)")   // Here there is a bug. 
+		.check_output(MyStruct(5), "MyStruct(5)")   // Here there is a bug.
 		.check_function(getNum, MyStruct(5), 5)     // Here there is a bug.
 		.check_function([](const MyStruct& s) {return s.myNum(); }, MyStruct(5), 5) // Here there is a bug.
 		.print();
