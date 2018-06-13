@@ -18,7 +18,7 @@ template<class T>	TestCase& TestCase::check_equal(T input, T expected) {
 	return *this;
 }
 
-template<class T> TestCase& TestCase::check_different(T input, T expected) {
+TestCase& TestCase::check_different(T input, T expected) {
 	++_num_tests;
 	if (input != expected) {
 		++_num_passed;
