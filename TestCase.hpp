@@ -29,7 +29,7 @@ public:
 			++_num_passed;
 		}
 		else {
-			_out << _name << ": Failure in test #" << _num_tests << ": The inputs are not equal!" << endl;
+			_out << _name << ": Failure in test #" << _num_tests << ": " << input << " should equal " << expected << "!" << endl;
 		}
 		return *this;
 	}
@@ -70,7 +70,7 @@ public:
 				++_num_passed;
 			}
 			else {
-				_out << _name << " failure in test #" << _num_tests << ": Function should return " << expected << " but returned " << func_result << "!" << endl;
+				_out << _name << ": Failure in test #" << _num_tests << ": Function should return " << expected << " but returned " << func_result << "!" << endl;
 			}
 		}
 		catch(exception& e) {
@@ -88,7 +88,7 @@ public:
 				++_num_passed;
 			}
 			else {
-				_out << _name << " failure in test #" << _num_tests << ": Function should return " << expected << " but returned " << func_result << "!" << endl;
+				_out << _name << ": Failure in test #" << _num_tests << ": Function should return " << expected << " but returned " << func_result << "!" << endl;
 			}
 		}
 		catch (exception& e) {
@@ -98,7 +98,7 @@ public:
 	}
 
 	void print() {
-		_out << _name << " : " << (_num_tests - _num_passed) << " failed, " << _num_passed << " passed, " << _num_tests << " total." << "\n---" << endl;
+		_out << _name << ": " << (_num_tests - _num_passed) << " failed, " << _num_passed << " passed, " << _num_tests << " total." << "\n---" << endl;
 	}
 
 };
